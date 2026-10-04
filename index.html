@@ -26,12 +26,7 @@
 
     <section class="hero" id="top">
       <div class="hero-main reveal">
-        <div class="orbit"></div>
-        <div class="particles" aria-hidden="true">
-          <i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-
-        <div>
+<div>
           <div class="kicker">E-COMMERCE · AI · AUTOMATION · <strong>BUILDER</strong></div>
 
           <div class="hero-title">
@@ -391,7 +386,7 @@
 
     <footer>
       <span>© 2026 蔡宏亮 · CAI HONGLIANG</span>
-      <span>PERSONAL SYSTEM / PORTFOLIO V09</span>
+      <span>AURORA GLASS / PORTFOLIO V10</span>
     </footer>
   </main>
 
@@ -436,32 +431,6 @@
       });
     },{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    if(matchMedia('(pointer:fine)').matches){
-      hero.addEventListener('pointermove',e=>{
-        const r=hero.getBoundingClientRect();
-        hero.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
-        hero.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
-      });
-
-      document.querySelectorAll('.magnetic').forEach(btn=>{
-        btn.addEventListener('pointermove',e=>{
-          const r=btn.getBoundingClientRect();
-          btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.08)+'px,'+((e.clientY-r.top-r.height/2)*.08)+'px)';
-        });
-        btn.addEventListener('pointerleave',()=>btn.style.transform='');
-      });
-
-      document.querySelectorAll('.cap-card,.project-card,.tool-card,.metric').forEach(card=>{
-        card.addEventListener('pointermove',e=>{
-          const r=card.getBoundingClientRect();
-          const x=(e.clientX-r.left)/r.width-.5;
-          const y=(e.clientY-r.top)/r.height-.5;
-          card.style.transform='perspective(900px) rotateX('+(-y*2.5)+'deg) rotateY('+(x*3)+'deg) translateY(-2px)';
-        });
-        card.addEventListener('pointerleave',()=>card.style.transform='');
-      });
-    }
   </script>
 </body>
 </html>
