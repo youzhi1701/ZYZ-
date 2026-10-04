@@ -1,386 +1,366 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="蔡宏亮的个人主页与项目作品集">
-  <meta name="theme-color" content="#07090e">
+  <meta name="theme-color" content="#08090c">
   <title>蔡宏亮｜个人主页</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<div id="progress"></div>
+  <div id="progress"></div>
 
   <main class="page">
     <header class="nav">
       <a class="brand" href="#top">蔡宏亮 <em>®</em><small>CAI HONGLIANG · PERSONAL SYSTEM</small></a>
-
       <nav class="navlinks">
-        <a href="#work">项目</a>
-        <a href="#about">关于</a>
-        <a href="#experience">经历</a>
-        <a href="#vision">方向</a>
+        <a href="#capabilities">能力</a>
+        <a href="#projects">项目</a>
+        <a href="#method">方式</a>
+        <a href="#timeline">时间线</a>
         <a href="#contact">联系</a>
       </nav>
-
-      <div class="live"><i></i> STILL BUILDING · 2026</div>
+      <div class="live"><i></i> BUILDING · 2026</div>
     </header>
 
     <section class="hero" id="top">
-      <div class="hero-main reveal shimmer">
-        <div class="orbit" data-parallax><span></span></div>
-        <div class="float-chip fc1">AI WORKFLOW</div>
-        <div class="float-chip fc2">E-COMMERCE</div>
-        <div class="float-chip fc3">AUTOMATION</div>
+      <div class="hero-main reveal">
+        <div class="orbit"></div>
+        <div class="particles" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
 
         <div>
-          <div class="eyebrow">个人主页 · <strong>PERSONAL SYSTEM</strong></div>
+          <div class="kicker">E-COMMERCE · AI · AUTOMATION · <strong>BUILDER</strong></div>
 
           <div class="hero-title">
-            <h1 class="split-title">蔡宏亮<span class="stroke">HONG LIANG</span></h1>
-            <div class="sub">电商运营 / AI 应用 / 自动化 / 产品设计 / 独立项目</div>
+            <div class="name">CAI HONGLIANG</div>
+            <h1>Build.<span class="stroke">Automate.</span>Operate.</h1>
+            <div class="cn">
+              蔡宏亮。把 AI、自动化和商业实践，做成真正能运行的系统。
+              <span class="rotator" id="rotator">电商经营</span>
+            </div>
           </div>
         </div>
 
         <div class="hero-bottom">
           <p>
-            我不太喜欢把自己定义成某一种岗位。做电商的时候，我会盯商品、流量和成交；
-            做工具的时候，我会去想操作顺不顺、信息是不是太多；碰到重复工作，我第一反应往往是：
-            这件事能不能让系统自己跑。
+            我一直对“怎么把复杂事情做简单”这件事很感兴趣。
+            从电商经营、商品视觉，到自动改价、数据统计，再到 AI 工具、软件界面和个人项目，
+            我会不断把重复、低效、繁琐的工作重新设计。
+            很多项目不是因为“我会某项技术”才开始，而是现实里先出现了问题，我再一点点把答案找出来。
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-acid" href="#work">看看我在做什么 ↘</a>
-            <a class="btn btn-dark" href="https://github.com/youzhi1701" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <div class="actions">
+            <a class="btn btn-gold magnetic" href="#projects">查看项目 ↘</a>
+            <a class="btn btn-ghost magnetic" href="#about">了解我</a>
           </div>
         </div>
       </div>
 
       <div class="side">
-        <aside class="panel profile reveal">
+        <aside class="card profile reveal">
           <div>
             <div class="avatar">蔡</div>
             <h2>蔡宏亮</h2>
             <p>
-              目前主要折腾电商、自动化、AI 和一些自己想用的小工具。
-              我不追求把东西堆得很复杂，更在意它最后能不能真的省事。
+              不是传统意义上的程序员，也不只是做运营。
+              我更擅长发现问题、拆解问题、找工具、快速试方案，然后把它真正跑起来。
             </p>
           </div>
 
           <div class="profile-grid">
-            <div class="mini"><span>现在在做</span><b>个人工具</b></div>
-            <div class="mini"><span>最关心</span><b>效率和体验</b></div>
-            <div class="mini"><span>做事习惯</span><b>先找问题</b></div>
-            <div class="mini"><span>常用组合</span><b>AI + RPA</b></div>
+            <div class="mini"><span>IDENTITY</span><b>电商经营者</b></div>
+            <div class="mini"><span>AI</span><b>工具实践者</b></div>
+            <div class="mini"><span>AUTOMATION</span><b>工作流搭建</b></div>
+            <div class="mini"><span>PRODUCT</span><b>项目落地</b></div>
           </div>
         </aside>
 
-        <aside class="panel manifesto reveal shimmer">
-          <small>ONE THING I BELIEVE</small>
-          <p>很多所谓“复杂”，其实只是没人愿意重新把它做简单。</p>
-          <div class="arr">↗</div>
+        <aside class="card principle reveal shine">
+          <small>PERSONAL PRINCIPLE</small>
+          <p>比起知道多少，我更关心事情最后有没有真的做出来。</p>
         </aside>
 
-        <aside class="panel now reveal">
-          <small>NOW BUILDING</small>
-          <h3>把零散工具慢慢连成一套</h3>
-          <p>
-            打印、行情、店铺数据、自动化通知，现在看起来是几个不同项目。
-            我更想做的是，把它们最后接成一个真正属于自己的工作系统。
-          </p>
-          <div class="line"><i></i></div>
+        <aside class="card now reveal">
+          <small>CURRENTLY / NOW</small>
+          <h3>现在还在持续折腾</h3>
+          <div class="now-list">
+            <span>经营电商项目</span>
+            <span>优化贵金属行情系统</span>
+            <span>研究 AI + 自动化工作流</span>
+            <span>整理个人数字资产</span>
+            <span>建设自己的数字主页</span>
+          </div>
         </aside>
       </div>
     </section>
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span><span>独立构建 INDIE BUILDING</span>
-        <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span><span>独立构建 INDIE BUILDING</span>
+        <span>E-COMMERCE</span><span>AI NATIVE</span><span>AUTOMATION</span><span>PRODUCT THINKING</span><span>DIGITAL SYSTEM</span><span>BUILDER</span>
+        <span>E-COMMERCE</span><span>AI NATIVE</span><span>AUTOMATION</span><span>PRODUCT THINKING</span><span>DIGITAL SYSTEM</span><span>BUILDER</span>
       </div>
     </div>
 
-    <section class="section reveal" id="work">
+    <section class="section reveal" id="about">
       <div class="section-head">
-        <div class="section-id">01 / SELECTED WORK · 项目</div>
-
+        <div class="section-id">01 / ABOUT · 个人简介</div>
         <div class="section-copy">
-          <h2>我做的东西，<br>基本都从“麻烦”开始。</h2>
+          <h2>我更在意问题怎么被解决，<br>而不是用了多复杂的技术。</h2>
           <p>
-            有些麻烦每天都会出现，有些只是偶尔遇到一次。
-            但只要我发现一件事反复在浪费时间，我就会想办法把它重新做一遍。
-            有时候是一套流程，有时候是一个界面，有时候最后真的会变成一个小产品。
+            电商让我习惯从商品和结果出发，AI 让我重新理解一个人能完成多少工作，
+            自动化则让我开始认真审视那些每天重复出现的动作。
+            对我来说，AI 不是聊天工具，自动化也不是炫技。
+            它们真正有价值的地方，是能不能进入工作流程，少一点重复，少一点等待，少一点没必要的操作。
           </p>
-        </div>
-      </div>
-
-      <div class="showcase">
-        <article class="work-main shimmer">
-          <div class="work-meta">
-            <div>
-              <div class="work-no">PROJECT 01 / PRODUCTIVITY TOOL</div>
-              <h3>超级打印</h3>
-            </div>
-            <div class="tag">桌面效率工具</div>
-          </div>
-
-          <div class="product-ui">
-            <div class="ui-grid">
-              <div class="ui-a"></div>
-              <div class="ui-b"></div>
-            </div>
-          </div>
-
-          <div class="work-desc">
-            <h4>我只是想让“打印”少点废操作。</h4>
-            <p>
-              一开始只是觉得传统打印流程太碎：选文件、认设备、调参数、确认任务，
-              明明是很小的一件事，却要来回点很多地方。
-              所以这个项目的方向一直很明确——能自动识别的就别让人选，
-              能自动绑定的就别重复设置，常用操作尽量放到一眼就能找到的位置。
-            </p>
-          </div>
-        </article>
-
-        <div class="work-stack">
-          <article class="work-card shimmer">
-            <div class="work-meta">
-              <div>
-                <div class="work-no">PROJECT 02 / MARKET DASHBOARD</div>
-                <h3>融通金</h3>
-              </div>
-              <div class="tag">行情看板</div>
-            </div>
-
-            <p>
-              做这个项目，是因为行情软件常常“什么都有”，但真正想看的东西还是散。
-              我更想把价格、K 线、预警、AI 资讯和日内状态放在同一个逻辑里，
-              打开以后先看到重点，而不是先找重点。
-            </p>
-
-            <div class="visual v1"></div>
-          </article>
-
-          <article class="work-card shimmer">
-            <div class="work-meta">
-              <div>
-                <div class="work-no">PROJECT 03 / AUTOMATION</div>
-                <h3>电商自动化</h3>
-              </div>
-              <div class="tag">RPA 工作流</div>
-            </div>
-
-            <p>
-              改价、成交额统计、日报、行情提醒，这些事单独看都不难，
-              但每天重复做就很浪费精力。
-              所以我会把能规则化的流程尽量交给自动化，自己只处理真正需要判断的部分。
-            </p>
-
-            <div class="visual v2"></div>
-          </article>
-        </div>
-      </div>
-
-      <div class="metrics">
-        <div class="metric">
-          <small>我做产品时先看什么</small>
-          <strong>01</strong>
-          <span>先找最烦、最重复、最容易出错的那一步。</span>
-        </div>
-
-        <div class="metric">
-          <small>什么功能值得留下</small>
-          <strong>02</strong>
-          <span>如果它不能让人少想一步、少点一下，就值得再问一次有没有必要。</span>
-        </div>
-
-        <div class="metric">
-          <small>我怎么看界面</small>
-          <strong>03</strong>
-          <span>不是把东西摆好看，而是让重要信息自己跳出来。</span>
-        </div>
-
-        <div class="metric">
-          <small>为什么一直改</small>
-          <strong>∞</strong>
-          <span>因为自己每天在用，很多问题只有真正用起来以后才看得到。</span>
         </div>
       </div>
     </section>
 
-    <section class="section reveal" id="about">
+    <section class="section reveal" id="capabilities">
       <div class="section-head">
-        <div class="section-id">02 / ABOUT · 关于我</div>
-
+        <div class="section-id">02 / CORE CAPABILITY · 核心能力</div>
         <div class="section-copy">
-          <h2>我不是科班做产品的，<br>但我每天都在解决产品问题。</h2>
-          <p>
-            我的很多想法都来自实际工作。商品怎么展示更清楚、数据怎么看更快、
-            通知怎么少打扰、软件怎么别让人找半天按钮。
-            久而久之，我会自然地把运营、设计、自动化这些东西放到一起看。
-          </p>
+          <h2>不是技能列表，<br>而是一套解决问题的能力结构。</h2>
+          <p>这些能力都来自实际使用和项目实践，不是为了把简历填满。</p>
         </div>
       </div>
 
-      <div class="bento">
-        <article class="bento-card tall acid shimmer">
-          <h4>我比较擅长的事</h4>
+      <div class="capabilities">
+        <article class="cap-card">
+          <div class="cap-no">01 / E-COMMERCE</div>
+          <h3>电商运营与商品经营</h3>
           <p>
-            把一个本来很散的问题整理成清楚的结构。
-            我不一定从代码开始，也不一定从设计开始，
-            我通常先判断：到底哪里最影响结果。
+            围绕京东、淘宝等平台持续做真实商品经营。
+            目前主要接触实物白银、投资银条、银块、银豆等贵金属商品。
+            从商品规划、视觉、标题、定价到广告、售后、用户反馈，都直接参与。
           </p>
+          <ul>
+            <li>商品上架</li><li>价格策略</li><li>广告投放</li><li>商品视觉</li><li>用户评价</li><li>店铺运营</li>
+          </ul>
+        </article>
 
-          <div class="pills">
-            <span class="pill">电商运营</span>
-            <span class="pill">AI 应用</span>
-            <span class="pill">RPA 自动化</span>
-            <span class="pill">产品设计</span>
-            <span class="pill">UI 梳理</span>
-            <span class="pill">流程优化</span>
+        <article class="cap-card">
+          <div class="cap-no">02 / AI WORKFLOW</div>
+          <h3>AI 工作流</h3>
+          <p>
+            AI 会进入视觉、文案、产品规划、界面设计、数据整理、代码辅助、问题分析和资料整理。
+            我关心的不是“用了哪个模型”，而是 AI 能不能真正进入一条工作链。
+          </p>
+          <ul>
+            <li>视觉设计</li><li>产品规划</li><li>代码辅助</li><li>问题分析</li><li>数据整理</li><li>方案设计</li>
+          </ul>
+        </article>
+
+        <article class="cap-card">
+          <div class="cap-no">03 / AUTOMATION</div>
+          <h3>自动化与效率系统</h3>
+          <p>
+            使用影刀 RPA、飞书多维表格、PowerShell 和自动化脚本，把规则明确、重复频繁的事情交给机器。
+            做过自动改价、成交统计、价格监控、邮件通知、日报、批量文件处理和数据清洗。
+          </p>
+          <ul>
+            <li>影刀 RPA</li><li>飞书多维表格</li><li>PowerShell</li><li>自动日报</li><li>数据清洗</li><li>文件处理</li>
+          </ul>
+        </article>
+
+        <article class="cap-card">
+          <div class="cap-no">04 / PRODUCT & UI</div>
+          <h3>产品与 UI 思维</h3>
+          <p>
+            我会反复调整信息层级、数据密度、页面布局、操作路径、大屏适配和移动端体验。
+            不是为了“看起来高级”，而是希望重要信息更快被看见，常用操作更少绕路。
+          </p>
+          <ul>
+            <li>信息层级</li><li>交互逻辑</li><li>数据密度</li><li>大屏适配</li><li>移动端</li><li>动效体验</li>
+          </ul>
+        </article>
+
+        <article class="cap-card problem shine">
+          <div class="cap-no">05 / PROBLEM SOLVING</div>
+          <h3>问题解决与项目落地</h3>
+          <p>
+            这可能是我最看重的一项能力。遇到一个陌生问题时，我不会先问“我会不会这个技术”，
+            而是先找最短的可行路径，再用不同工具把它拼起来。
+          </p>
+          <div class="flow">
+            <b>发现问题</b><i>→</i><b>拆解问题</b><i>→</i><b>找方案</b><i>→</i><b>快速验证</b><i>→</i><b>调整</b><i>→</i><b>落地</b>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="section-head">
+        <div class="section-id">03 / PROJECTS · 项目经历</div>
+        <div class="section-copy">
+          <h2>项目不一定大，<br>但都是真的问题、真的在做。</h2>
+          <p>这里不放虚构的大厂经历，只放我自己经营、搭建、研究和持续优化过的东西。</p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project-featured shine">
+          <div class="project-head">
+            <div>
+              <div class="project-no">PROJECT 01 / PRECIOUS METAL E-COMMERCE</div>
+              <h3>贵金属电商经营</h3>
+            </div>
+            <div class="tag">真实经营</div>
           </div>
 
-          <div class="giant">01</div>
+          <div class="mockup">
+            <div class="ui"><div></div><div></div></div>
+          </div>
+
+          <div class="project-copy">
+            <h4>从产品本身，一直做到消费者真正看到它。</h4>
+            <p>
+              围绕实物白银做产品规划、不同克重组合、京东与淘宝视觉、商品标题、价格体系、
+              消费者反馈、包装、售后规则和供应链沟通。
+              这类项目让我真正理解：视觉、价格、规则和信任感必须同时成立。
+            </p>
+          </div>
         </article>
 
-        <article class="bento-card wide">
-          <h4>我的做事方式</h4>
-          <p>
-            我不太喜欢一上来就堆功能。一般会先把最核心的使用场景抓出来，
-            看用户真正会点哪里、停在哪里、哪里最容易出错，
-            再决定哪些东西该显示，哪些东西最好永远藏在后台。
-          </p>
-          <div class="giant">02</div>
-        </article>
+        <div class="project-grid projects-mobile">
+          <article class="project-card">
+            <div class="project-no">PROJECT 02 / MARKET SYSTEM</div>
+            <h3>贵金属实时行情系统</h3>
+            <strong>白银为核心的实时数据看板</strong>
+            <p>整合销售价、回购价、黄金、铂金、K 线、分时、预警、AI 行情摘要、涨跌和数据延迟，目标是高密度但不难读。</p>
+            <div class="mini-line"></div>
+          </article>
 
-        <article class="bento-card light">
-          <h4>平时常用</h4>
-          <p>
-            ChatGPT、飞书多维表格、GitHub、Vercel、影刀 RPA，
-            以及各种能把重复工作自动掉的小工具。
-          </p>
-          <div class="giant">03</div>
-        </article>
+          <article class="project-card">
+            <div class="project-no">PROJECT 03 / AUTO PRICING</div>
+            <h3>电商自动化改价系统</h3>
+            <strong>行情数据 + 店铺策略 + 自动执行</strong>
+            <p>获取白银行情数据，结合不同店铺基础价和溢价策略自动计算销售价格，并输出运行状态通知。</p>
+            <div class="mini-line"></div>
+          </article>
 
-        <article class="bento-card">
-          <h4>最近最感兴趣</h4>
-          <p>
-            AI 工作流、个人软件、数据看板、自动化系统，以及“一个人可以做到多大的产品闭环”。
-          </p>
-          <div class="giant">04</div>
-        </article>
+          <article class="project-card">
+            <div class="project-no">PROJECT 04 / DAILY REPORT</div>
+            <h3>自动成交数据日报</h3>
+            <strong>把多个店铺数据压缩成一屏重点</strong>
+            <p>自动汇总成交额，计算预估克重、预估克价、各店铺成交情况和当前行情，再生成简洁日报。</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-no">PROJECT 05 / DIGITAL ASSET</div>
+            <h3>本地照片与视频资产整理</h3>
+            <strong>处理 TB 级历史媒体文件</strong>
+            <p>使用 ExifTool、PowerShell、CSV 和文件元数据研究拍摄日期、创建时间、批量扫描、目录整理和检索方案。</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-no">PROJECT 06 / AI VISUAL</div>
+            <h3>AI 辅助视觉生产</h3>
+            <strong>先保真，再增强展示</strong>
+            <p>建立银条、电商主图的产品还原规则，保证形状、比例、厚度、纹理、钢印与银色质感不变，再调整 UI、背景、灯光和信息层级。</p>
+            <div class="mini-line"></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-no">PROJECT 07 / PERSONAL WEB</div>
+            <h3>个人网站 / 数字名片</h3>
+            <strong>不是一次性简历，而是长期更新的主页</strong>
+            <p>用来放个人介绍、能力体系、项目、时间线、正在研究的事情，以及以后更多可以被访问和持续更新的内容。</p>
+            <div class="mini-line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="method">
+      <div class="section-head">
+        <div class="section-id">04 / HOW I WORK · 我的工作方式</div>
+        <div class="section-copy">
+          <h2>我更愿意先做出一个能跑的版本，<br>再让真实使用告诉我哪里不对。</h2>
+        </div>
+      </div>
+
+      <div class="method">
+        <article class="method-step"><div class="n">01</div><div><h3>发现问题</h3><p>很多项目都从一个很具体的麻烦开始。先把真正浪费时间的点找出来。</p></div></article>
+        <article class="method-step"><div class="n">02</div><div><h3>快速找办法</h3><p>不会局限在某一种工具。能用 AI、RPA、表格、脚本或现成项目解决，就先用合适的。</p></div></article>
+        <article class="method-step"><div class="n">03</div><div><h3>先做出来</h3><p>相比长时间讨论，我更倾向于先做出一个可运行版本，让问题尽快暴露。</p></div></article>
+        <article class="method-step"><div class="n">04</div><div><h3>持续修改</h3><p>真正开始使用以后出现的问题，通常比最开始的设想更值得解决。</p></div></article>
+        <article class="method-step"><div class="n">05</div><div><h3>最后形成自己的系统</h3><p>如果一个流程长期有效，我会把零散工具、规则和经验逐步整理成可重复使用的方法。</p></div></article>
       </div>
     </section>
 
     <section class="section reveal">
       <div class="section-head">
-        <div class="section-id">03 / NOTES · 一些真实想法</div>
-
+        <div class="section-id">05 / MY TOOLBOX · 工具箱</div>
         <div class="section-copy">
-          <h2>我其实没有那么多大道理，<br>更多是做着做着想明白的。</h2>
-          <p>
-            这些不是“个人品牌金句”，就是我现在做项目时比较真实的判断。
-          </p>
+          <h2>工具一直在换，<br>真正留下的是使用方式。</h2>
+          <p>下面是我日常会用、正在探索或拿来搭项目的工具，不代表“全部精通”。</p>
         </div>
       </div>
 
-      <div class="story">
-        <article class="story-card">
-          <h4>关于效率</h4>
-          <p>
-            我以前也会觉得“多做一点就好了”，后来慢慢发现，
-            很多低效不是人不努力，而是流程本身就不值得被重复执行。
-          </p>
-          <div class="quote">能自动的事情，就别靠记性；能少一步的流程，就别多点一次。</div>
-        </article>
-
-        <article class="story-card">
-          <h4>关于设计</h4>
-          <p>
-            我不觉得高级感等于玻璃、渐变、阴影。
-            真正好看的界面，通常是信息关系很清楚，细节又没有敷衍。
-          </p>
-          <div class="quote">用户不应该因为设计“很酷”，反而不知道下一步该做什么。</div>
-        </article>
-
-        <article class="story-card">
-          <h4>关于 AI</h4>
-          <p>
-            我对 AI 最大的兴趣，不是让它替我写一段话，
-            而是让它接进真正的工作里，跟数据、表格、RPA 和软件流程连起来。
-          </p>
-          <div class="quote">AI 真正有意思的地方，是它开始参与流程，而不只是参与聊天。</div>
-        </article>
-
-        <article class="story-card">
-          <h4>关于做自己的东西</h4>
-          <p>
-            我很享受一个项目从“这里怎么这么难用”开始，
-            最后变成自己每天真的会打开的工具。
-          </p>
-          <div class="quote">做自己的产品，最难的不是开始，而是愿不愿意一直改。</div>
-        </article>
+      <div class="toolbox">
+        <article class="tool-card"><small>DAILY TOOLS / AI</small><h3>ChatGPT · Claude · Gemini · 豆包</h3><p>用于分析、视觉、规划、写作、代码辅助和项目推进。</p></article>
+        <article class="tool-card"><small>BUILDING WITH / AUTOMATION</small><h3>影刀 RPA · 飞书 · PowerShell</h3><p>处理重复流程、数据汇总、自动通知、文件批处理和日常自动化。</p></article>
+        <article class="tool-card"><small>BUILDING WITH / WEB</small><h3>GitHub · HTML · CSS · JavaScript · AI Coding</h3><p>用来搭小工具、个人网页和一些自己会长期维护的项目。</p></article>
+        <article class="tool-card"><small>USED / DATA</small><h3>Excel · CSV · 数据清洗 · 可视化</h3><p>处理经营数据、日报、价格、文件元数据和结构化信息。</p></article>
+        <article class="tool-card"><small>USED / VISUAL</small><h3>AI 图像 · Photoshop · UI · 电商视觉</h3><p>重点是保留产品真实性，同时提高展示效率和信息表达。</p></article>
+        <article class="tool-card"><small>USED / E-COMMERCE</small><h3>京东 · 淘宝 · 商智 · 广告投放</h3><p>真实业务场景中的商品、流量、价格、视觉和运营实践。</p></article>
       </div>
     </section>
 
-    <section class="section reveal" id="experience">
+    <section class="section reveal">
       <div class="section-head">
-        <div class="section-id">04 / EXPERIENCE · 经历</div>
-
+        <div class="section-id">06 / DASHBOARD · 数字化概览</div>
         <div class="section-copy">
-          <h2>不是一条标准路线，<br>但每一步都能接起来。</h2>
-          <p>
-            先做业务，再碰自动化，再开始做自己的软件和网站。
-            看起来跨度很大，但对我来说，其实一直在解决同一种问题：
-            怎么把事情做得更顺、更快、更清楚。
-          </p>
+          <h2>不放夸张数字，<br>只放能说明我在做什么的维度。</h2>
+        </div>
+      </div>
+
+      <div class="dashboard">
+        <article class="metric"><small>PROJECTS</small><strong data-count="7">0</strong><span>当前主页整理出的实际项目方向</span></article>
+        <article class="metric"><small>PLATFORMS</small><strong data-count="2">0</strong><span>持续接触的主要电商平台：京东 / 淘宝</span></article>
+        <article class="metric"><small>DIGITAL ASSETS</small><strong>TB+</strong><span>照片与视频资产整理场景</span></article>
+        <article class="metric"><small>WORK MODE</small><strong>∞</strong><span>持续迭代，不把第一版当最终答案</span></article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="timeline">
+      <div class="section-head">
+        <div class="section-id">07 / TIMELINE · 个人时间线</div>
+        <div class="section-copy">
+          <h2>不是一条标准职业路线，<br>更像一路不断把边界往外推。</h2>
         </div>
       </div>
 
       <div class="timeline">
-        <article class="time-card">
-          <div class="year">BUSINESS / 业务</div>
-          <h4>从电商开始理解“结果”</h4>
-          <p>
-            商品、视觉、流量、广告、成交，这些事情让我慢慢形成一个习惯：
-            再好看的方案，如果对真实结果没有帮助，就还不算做完。
-          </p>
-        </article>
-
-        <article class="time-card">
-          <div class="year">AUTOMATION / 自动化</div>
-          <h4>开始对重复操作越来越没耐心</h4>
-          <p>
-            当同一个动作一天做很多次以后，我会本能地想把它交给 RPA。
-            从改价、统计到日报，我做自动化的动力其实很朴素：不想把时间花在机械重复上。
-          </p>
-        </article>
-
-        <article class="time-card">
-          <div class="year">PRODUCT / 产品</div>
-          <h4>开始真正做自己的东西</h4>
-          <p>
-            从界面草图、功能结构，到 GitHub、Vercel 和持续修改，
-            我开始体会一个项目从“想法”变成“能用”的过程。
-            这也是我现在最想继续做下去的方向。
-          </p>
-        </article>
+        <article class="time"><small>STEP 01</small><h3>第一次接触互联网项目</h3><p>开始习惯自己查资料、找工具、试方案。</p></article>
+        <article class="time"><small>STEP 02</small><h3>开始做电商</h3><p>真正接触商品、流量、价格、用户反馈和经营结果。</p></article>
+        <article class="time"><small>STEP 03</small><h3>研究商品视觉</h3><p>从“好不好看”慢慢转向“用户第一眼看懂什么”。</p></article>
+        <article class="time"><small>STEP 04</small><h3>开始长期使用 AI</h3><p>从聊天辅助，逐步变成工作流程的一部分。</p></article>
+        <article class="time"><small>STEP 05</small><h3>尝试自动化</h3><p>把改价、统计、日报等重复流程交给系统。</p></article>
+        <article class="time"><small>STEP 06</small><h3>研究数据系统</h3><p>开始把行情、状态、预警和多源数据放到同一个界面。</p></article>
+        <article class="time"><small>STEP 07</small><h3>自己设计软件</h3><p>开始从需求、UI、交互到部署完整走一遍。</p></article>
+        <article class="time"><small>STEP 08</small><h3>建立个人数字主页</h3><p>把项目、经验、想法和正在做的事情放到长期更新的入口里。</p></article>
       </div>
     </section>
 
-    <section class="vision reveal shimmer" id="vision">
+    <section class="vision reveal shine" id="vision">
       <div class="vision-grid">
         <div>
-          <div class="section-id" style="color:#60656e">05 / NEXT · 接下来</div>
-          <h2>我想把这些东西，<br>最后连成一套。</h2>
+          <div class="section-id" style="color:#656b73">08 / WHAT'S NEXT · 接下来</div>
+          <h2>我想做的，<br>不止一个网站。</h2>
         </div>
 
         <div>
           <p>
-            现在每个项目还是分开的：超级打印是打印工具，融通金是行情系统，
-            电商自动化处理店铺数据。
-            但我真正想做的是，让这些工具以后都可以互相认识、互相调用，
-            最后形成一套属于自己的个人数字工作台。
+            现在这些项目还是分散的：电商、行情、自动化、文件、个人主页。
+            我更感兴趣的是，未来能不能把它们慢慢连成一套自己的数字系统。
+            网站是入口，AI 是协作方式，自动化是执行层，真实业务才是最终落点。
           </p>
 
           <div class="vision-list">
@@ -388,89 +368,98 @@
             <div class="vision-item"><span>自动化任务中心</span><span>AUTOMATION OS</span></div>
             <div class="vision-item"><span>业务与行情数据</span><span>DATA INTELLIGENCE</span></div>
             <div class="vision-item"><span>AI 个人助手</span><span>PERSONAL AI</span></div>
-            <div class="vision-item"><span>个人作品与记录</span><span>DIGITAL ARCHIVE</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contact reveal shimmer" id="contact">
+    <section class="contact reveal shine" id="contact">
       <div>
-        <div class="eyebrow">最后一页 · <strong>LET'S CONNECT</strong></div>
-        <h2>想法可以很多，<br>但最后还是要做出来。</h2>
+        <div class="kicker">LET'S CONNECT · <strong>保持联系</strong></div>
+        <h2>想法不难，<br>做出来才开始有价值。</h2>
         <p>
-          这里以后会放我的真实项目、更新记录、联系方式和更多正在做的东西。
-          现在它还在变化，就像我手里的其他项目一样。
+          这里以后会继续放我的真实项目、更新记录和新的尝试。
+          页面本身也不会一直长这样，它会跟着我做的事情继续变。
         </p>
       </div>
 
-      <div class="contact-actions">
-        <a class="btn btn-acid" href="https://github.com/youzhi1701" target="_blank" rel="noreferrer">去 GitHub 看看 ↗</a>
-        <a class="btn btn-dark" href="#top">回到顶部 ↑</a>
+      <div class="actions">
+        <a class="btn btn-gold magnetic" href="https://github.com/youzhi1701" target="_blank" rel="noreferrer">查看 GitHub ↗</a>
+        <a class="btn btn-ghost magnetic" href="#top">回到顶部 ↑</a>
       </div>
     </section>
 
     <footer>
       <span>© 2026 蔡宏亮 · CAI HONGLIANG</span>
-      <span>PERSONAL PORTFOLIO · HYBRID RESTORE V08</span>
+      <span>PERSONAL SYSTEM / PORTFOLIO V09</span>
     </footer>
   </main>
 
   <script>
-    const progress = document.getElementById('progress');
-    const navLinks = document.querySelectorAll('.navlinks a');
-    const parallax = document.querySelectorAll('[data-parallax]');
+    const progress=document.getElementById('progress');
+    const hero=document.querySelector('.hero-main');
+    const links=[...document.querySelectorAll('.navlinks a')];
+    const sections=[...document.querySelectorAll('section[id]')];
+    const rotator=document.getElementById('rotator');
+    const words=['电商经营','AI 实践','自动化','产品探索'];
+    let wi=0;
+
+    setInterval(()=>{
+      wi=(wi+1)%words.length;
+      rotator.style.opacity='0';
+      setTimeout(()=>{rotator.textContent=words[wi];rotator.style.opacity='1'},180);
+    },2200);
 
     addEventListener('scroll',()=>{
-      const max = document.documentElement.scrollHeight - innerHeight;
-      progress.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%';
+      const max=document.documentElement.scrollHeight-innerHeight;
+      progress.style.width=(max?scrollY/max*100:0)+'%';
+      let current='';
+      sections.forEach(s=>{if(scrollY>=s.offsetTop-180)current=s.id});
+      links.forEach(a=>a.classList.toggle('active',a.hash==='#'+current));
+    },{passive:true});
 
-      parallax.forEach(el=>{
-        el.style.translate = '0 ' + (scrollY * .035) + 'px';
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(!e.isIntersecting)return;
+        e.target.classList.add('show');
+        e.target.querySelectorAll('[data-count]').forEach(el=>{
+          if(el.dataset.done)return;
+          el.dataset.done='1';
+          const end=+el.dataset.count;
+          let n=0;
+          const timer=setInterval(()=>{
+            n++;
+            el.textContent=n;
+            if(n>=end)clearInterval(timer);
+          },120);
+        });
       });
-
-      let current = '';
-      document.querySelectorAll('section[id]').forEach(sec=>{
-        if(scrollY >= sec.offsetTop - 180) current = sec.id;
-      });
-
-      navLinks.forEach(link=>{
-        link.classList.toggle('active',link.getAttribute('href') === '#' + current);
-      });
-    });
-
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting) entry.target.classList.add('show');
-      });
-    },{threshold:.10});
-
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-    const title = document.querySelector('.split-title');
-    const firstText = title.childNodes[0].textContent;
-    title.childNodes[0].textContent = '';
-
-    [...firstText].forEach((ch,i)=>{
-      const span = document.createElement('span');
-      span.className = 'char';
-      span.textContent = ch;
-      span.style.animationDelay = (i*.08+.18)+'s';
-      title.insertBefore(span,title.firstElementChild);
-    });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
     if(matchMedia('(pointer:fine)').matches){
-      document.querySelectorAll('.work-main,.work-card,.bento-card,.time-card,.story-card').forEach(card=>{
-        card.addEventListener('pointermove',e=>{
-          const r = card.getBoundingClientRect();
-          const rx = ((e.clientY-r.top)/r.height-.5)*-3.2;
-          const ry = ((e.clientX-r.left)/r.width-.5)*4;
-          card.style.transform = 'perspective(1000px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-3px)';
-        });
+      hero.addEventListener('pointermove',e=>{
+        const r=hero.getBoundingClientRect();
+        hero.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+        hero.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+      });
 
-        card.addEventListener('pointerleave',()=>{
-          card.style.transform = '';
+      document.querySelectorAll('.magnetic').forEach(btn=>{
+        btn.addEventListener('pointermove',e=>{
+          const r=btn.getBoundingClientRect();
+          btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.08)+'px,'+((e.clientY-r.top-r.height/2)*.08)+'px)';
         });
+        btn.addEventListener('pointerleave',()=>btn.style.transform='');
+      });
+
+      document.querySelectorAll('.cap-card,.project-card,.tool-card,.metric').forEach(card=>{
+        card.addEventListener('pointermove',e=>{
+          const r=card.getBoundingClientRect();
+          const x=(e.clientX-r.left)/r.width-.5;
+          const y=(e.clientY-r.top)/r.height-.5;
+          card.style.transform='perspective(900px) rotateX('+(-y*2.5)+'deg) rotateY('+(x*3)+'deg) translateY(-2px)';
+        });
+        card.addEventListener('pointerleave',()=>card.style.transform='');
       });
     }
   </script>
