@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>蔡奥琦｜个人简历</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:
+        Inter,
+        "PingFang SC",
+        "Microsoft YaHei",
+        sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(91, 141, 239, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(160, 99, 255, 0.10), transparent 30%),
+        #f7f8fc;
+      color: #1d2433;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 70px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 20px 60px rgba(40, 50, 80, 0.08);
+      border-radius: 24px;
+    }
+
+    .intro {
+      padding: 46px;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #eef3ff;
+      color: #4c6fff;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      letter-spacing: -2px;
+      margin-bottom: 14px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #596174;
+      line-height: 1.7;
+      max-width: 700px;
+    }
+
+    .intro-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #111827;
+      color: white;
+    }
+
+    .btn-light {
+      background: #f1f3f7;
+      color: #20283a;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .profile {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, #111827, #4f69ff);
+      margin-bottom: 24px;
+    }
+
+    .profile h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .profile p {
+      color: #6a7284;
+      line-height: 1.7;
+    }
+
+    .status {
+      margin-top: 28px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #f7f8fb;
+      font-size: 14px;
+      color: #4d5668;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .section {
+      padding: 30px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #8a93a4;
+      margin-bottom: 22px;
+    }
+
+    .about {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #424a5c;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 10px 13px;
+      border-radius: 10px;
+      background: #f2f4f8;
+      color: #394154;
+      font-size: 14px;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .project {
+      padding: 18px;
+      border-radius: 16px;
+      background: #f7f8fb;
+    }
+
+    .project strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .project span {
+      color: #747c8d;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      border-left: 2px solid #e3e6ee;
+      padding-left: 18px;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item span {
+      color: #7a8293;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .contact {
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .contact h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .contact p {
+      color: #757d8e;
+    }
+
+    footer {
+      text-align: center;
+      color: #9299a7;
+      font-size: 13px;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 800px) {
+      .hero,
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro {
+        padding: 30px;
+      }
+
+      .profile,
+      .section,
+      .contact {
+        padding: 24px;
+      }
+
+      .contact {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <section class="hero">
+      <div class="card intro">
+        <div class="label">PERSONAL PORTFOLIO</div>
+
+        <h1>你好，我是蔡奥琦</h1>
+
+        <p class="subtitle">
+          专注于电商运营、AI 工具、自动化与软件产品设计。
+          喜欢把复杂的事情做简单，把重复的事情交给自动化。
+        </p>
+
+        <div class="intro-actions">
+          <a href="#projects" class="btn btn-primary">查看我的项目</a>
+          <a href="#contact" class="btn btn-light">联系我</a>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div>
+          <div class="avatar">蔡</div>
+
+          <h2>蔡奥琦</h2>
+          <p>
+            电商运营 · AI 应用<br />
+            自动化 · 产品设计
+          </p>
+        </div>
+
+        <div class="status">
+          ● 当前正在持续开发个人工具与自动化项目
+        </div>
+      </aside>
+    </section>
+
+    <section class="section-grid">
+      <div class="card section">
+        <div class="section-title">About Me</div>
+
+        <p class="about">
+          有电商运营、产品设计和自动化实践经验，
+          熟悉 ChatGPT、飞书多维表格、RPA 等效率工具。
+          注重实际落地，希望通过软件和自动化减少重复工作，
+          提升个人与业务效率。
+        </p>
+      </div>
+
+      <div class="card section">
+        <div class="section-title">Skills</div>
+
+        <div class="tags">
+          <span class="tag">电商运营</span>
+          <span class="tag">AI 应用</span>
+          <span class="tag">RPA 自动化</span>
+          <span class="tag">ChatGPT</span>
+          <span class="tag">飞书多维表格</span>
+          <span class="tag">UI / 产品设计</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Vercel</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-grid" id="projects">
+      <div class="card section">
+        <div class="section-title">Projects</div>
+
+        <div class="project-list">
+          <div class="project">
+            <strong>超级打印</strong>
+            <span>
+              面向日常办公场景的打印与文件处理工具，
+              计划实现批量打印、任务管理等功能。
+            </span>
+          </div>
+
+          <div class="project">
+            <strong>融通金</strong>
+            <span>
+              贵金属行情看板与行情监控系统，
+              主要用于白银实时行情、预警和数据展示。
+            </span>
+          </div>
+
+          <div class="project">
+            <strong>电商自动化系统</strong>
+            <span>
+              通过 RPA、表格与自动化流程，
+              完成改价、数据统计和日报通知。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card section">
+        <div class="section-title">Experience</div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>电商运营</strong>
+            <span>
+              商品管理、视觉设计、数据分析、
+              广告投放与日常运营。
+            </span>
+          </div>
+
+          <div class="timeline-item">
+            <strong>自动化实践</strong>
+            <span>
+              使用 RPA、AI 与表格工具搭建自动执行流程。
+            </span>
+          </div>
+
+          <div class="timeline-item">
+            <strong>产品与工具开发</strong>
+            <span>
+              持续尝试将个人需求转化为实际可使用的软件工具。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card contact" id="contact">
+      <div>
+        <div class="section-title">Contact</div>
+
+        <h2>保持联系</h2>
+
+        <p>
+          欢迎交流电商、AI、自动化和产品相关内容。
+        </p>
+      </div>
+
+      <a href="mailto:your@email.com" class="btn btn-primary">
+        联系我
+      </a>
+    </section>
+
+    <footer>
+      © 2026 蔡奥琦 · Personal Website
+    </footer>
+
+  </main>
+</body>
+</html>
