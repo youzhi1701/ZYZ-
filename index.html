@@ -1,27 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="蔡宏亮的个人主页与项目作品集">
-  <meta name="theme-color" content="#07090e">
+  <meta name="theme-color" content="#080a0f">
   <title>蔡宏亮｜个人主页</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="motion-grid"></div>
-  <div class="ambient-blob blob-a"></div>
-  <div class="ambient-blob blob-b"></div>
-  <div class="ambient-blob blob-c"></div>
-  <div class="scanlines"></div>
-  <div class="spotlight" id="spotlight"></div>
-  <canvas id="fx"></canvas>
   <div id="progress"></div>
+  <div class="noise"></div>
 
   <main class="page">
     <header class="nav">
-      <a class="brand" href="#top">蔡宏亮 <em>®</em><small>CAI HONGLIANG · PERSONAL SYSTEM</small></a>
-
+      <a class="brand" href="#top">蔡宏亮 <b>®</b><small>CAI HONGLIANG · PERSONAL SYSTEM</small></a>
       <nav class="navlinks">
         <a href="#work">项目</a>
         <a href="#about">关于</a>
@@ -29,38 +22,29 @@
         <a href="#vision">方向</a>
         <a href="#contact">联系</a>
       </nav>
-
       <div class="live"><i></i> STILL BUILDING · 2026</div>
     </header>
 
     <section class="hero" id="top">
-      <div class="hero-main reveal shimmer">
-        <div class="orbit" data-parallax><span></span></div>
-        <div class="hero-pulse hp1"></div>
-        <div class="hero-pulse hp2"></div>
-        <div class="hero-pulse hp3"></div>
-        <div class="mobile-orbit"></div>
-        <div class="float-chip fc1">AI WORKFLOW</div>
-        <div class="float-chip fc2">E-COMMERCE</div>
-        <div class="float-chip fc3">AUTOMATION</div>
+      <div class="hero-main reveal">
+        <div class="orbit"></div>
 
         <div>
-          <div class="eyebrow">个人主页 · <strong>PERSONAL SYSTEM</strong></div>
-
+          <div class="kicker">个人主页 · <strong>PERSONAL SYSTEM</strong></div>
           <div class="hero-title">
-            <h1 class="split-title">蔡宏亮<span class="stroke">HONG LIANG</span></h1>
-            <div class="sub">电商运营 / AI 应用 / 自动化 / 产品设计 / 独立项目</div>
+            <h1>蔡宏亮<span class="stroke">HONG LIANG</span></h1>
+            <p>电商运营 / AI 应用 / 自动化 / 产品设计 / 独立项目</p>
           </div>
         </div>
 
         <div class="hero-bottom">
           <p>
-            我不太喜欢把自己定义成某一种岗位。做电商的时候，我会盯商品、流量和成交；
-            做工具的时候，我会去想操作顺不顺、信息是不是太多；碰到重复工作，我第一反应往往是：
-            这件事能不能让系统自己跑。
+            我不太喜欢把自己限定成某一种岗位。做电商的时候，我会盯商品、流量和成交；
+            做工具的时候，我更在意操作是不是顺、信息是不是清楚；
+            碰到重复工作，我第一反应通常是：这件事能不能让系统自己跑。
           </p>
 
-          <div class="hero-actions">
+          <div class="actions">
             <a class="btn btn-acid" href="#work">看看我在做什么 ↘</a>
             <a class="btn btn-dark" href="https://github.com/youzhi1701" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
@@ -68,13 +52,13 @@
       </div>
 
       <div class="side">
-        <aside class="panel profile reveal">
+        <aside class="card profile reveal">
           <div>
             <div class="avatar">蔡</div>
             <h2>蔡宏亮</h2>
             <p>
-              目前主要折腾电商、自动化、AI 和一些自己想用的小工具。
-              我不追求把东西堆得很复杂，更在意它最后能不能真的省事。
+              目前主要折腾电商、自动化、AI 和一些自己真会用的小工具。
+              我不追求把东西堆得复杂，更在意它最后能不能让人少做几步。
             </p>
           </div>
 
@@ -86,169 +70,129 @@
           </div>
         </aside>
 
-        <aside class="panel manifesto reveal shimmer">
+        <aside class="card quote-card reveal shine">
           <small>ONE THING I BELIEVE</small>
           <p>很多所谓“复杂”，其实只是没人愿意重新把它做简单。</p>
-          <div class="arr">↗</div>
         </aside>
 
-        <aside class="panel now reveal">
+        <aside class="card now reveal">
           <small>NOW BUILDING</small>
           <h3>把零散工具慢慢连成一套</h3>
           <p>
-            打印、行情、店铺数据、自动化通知，现在看起来是几个不同项目。
-            我更想做的是，把它们最后接成一个真正属于自己的工作系统。
+            打印、行情、店铺数据、自动化通知，现在看起来是几个项目。
+            我更想做的是，把它们最后接成一个属于自己的工作系统。
           </p>
-          <div class="line"><i></i></div>
+          <div class="meter"><i></i></div>
         </aside>
       </div>
     </section>
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span><span>独立构建 INDIE BUILDING</span>
-        <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span><span>独立构建 INDIE BUILDING</span>
-      </div>
-    </div>
-
-    <div class="marquee reverse" aria-hidden="true">
-      <div class="marquee-track">
-        <span>BUILD SMALL</span><span>ITERATE FAST</span><span>KEEP IT USEFUL</span><span>LESS FRICTION</span><span>MORE CLARITY</span><span>MAKE IT REAL</span>
-        <span>BUILD SMALL</span><span>ITERATE FAST</span><span>KEEP IT USEFUL</span><span>LESS FRICTION</span><span>MORE CLARITY</span><span>MAKE IT REAL</span>
+        <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span>
+        <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span>
       </div>
     </div>
 
     <section class="section reveal" id="work">
       <div class="section-head">
         <div class="section-id">01 / SELECTED WORK · 项目</div>
-
         <div class="section-copy">
           <h2>我做的东西，<br>基本都从“麻烦”开始。</h2>
           <p>
-            有些麻烦每天都会出现，有些只是偶尔遇到一次。
-            但只要我发现一件事反复在浪费时间，我就会想办法把它重新做一遍。
-            有时候是一套流程，有时候是一个界面，有时候最后真的会变成一个小产品。
+            一件事只要反复浪费时间，我就会想办法重新做一遍。
+            有时候最后变成一套流程，有时候是一个页面，有时候就真的会变成一个产品。
           </p>
         </div>
       </div>
 
-      <div class="showcase">
-        <article class="work-main shimmer">
-          <div class="work-meta">
+      <div class="projects">
+        <article class="project-main shine">
+          <div class="project-head">
             <div>
-              <div class="work-no">PROJECT 01 / PRODUCTIVITY TOOL</div>
+              <div class="project-no">PROJECT 01 / PRODUCTIVITY TOOL</div>
               <h3>超级打印</h3>
             </div>
             <div class="tag">桌面效率工具</div>
           </div>
 
-          <div class="product-ui">
-            <div class="ui-grid">
-              <div class="ui-a"></div>
-              <div class="ui-b"></div>
-            </div>
+          <div class="mockup">
+            <div class="ui"><div></div><div></div></div>
           </div>
 
-          <div class="work-desc">
+          <div class="project-copy">
             <h4>我只是想让“打印”少点废操作。</h4>
             <p>
-              一开始只是觉得传统打印流程太碎：选文件、认设备、调参数、确认任务，
-              明明是很小的一件事，却要来回点很多地方。
-              所以这个项目的方向一直很明确——能自动识别的就别让人选，
-              能自动绑定的就别重复设置，常用操作尽量放到一眼就能找到的位置。
+              传统打印流程里，选文件、认设备、调参数、确认任务这些动作太碎。
+              所以这个项目一直在做一件事：能自动识别的别让人选，能自动绑定的别重复设置，
+              常用操作尽量放到一眼就能找到的位置。
             </p>
           </div>
         </article>
 
-        <div class="work-stack">
-          <article class="work-card shimmer">
-            <div class="work-meta">
+        <div class="project-stack">
+          <article class="project-card shine">
+            <div class="project-head">
               <div>
-                <div class="work-no">PROJECT 02 / MARKET DASHBOARD</div>
+                <div class="project-no">PROJECT 02 / MARKET DASHBOARD</div>
                 <h3>融通金</h3>
               </div>
               <div class="tag">行情看板</div>
             </div>
-
             <p>
               做这个项目，是因为行情软件常常“什么都有”，但真正想看的东西还是散。
-              我更想把价格、K 线、预警、AI 资讯和日内状态放在同一个逻辑里，
+              我更想把价格、K 线、预警、AI 资讯和日内状态放到同一套逻辑里，
               打开以后先看到重点，而不是先找重点。
             </p>
-
             <div class="visual v1"></div>
           </article>
 
-          <article class="work-card shimmer">
-            <div class="work-meta">
+          <article class="project-card shine">
+            <div class="project-head">
               <div>
-                <div class="work-no">PROJECT 03 / AUTOMATION</div>
+                <div class="project-no">PROJECT 03 / AUTOMATION</div>
                 <h3>电商自动化</h3>
               </div>
               <div class="tag">RPA 工作流</div>
             </div>
-
             <p>
               改价、成交额统计、日报、行情提醒，这些事单独看都不难，
-              但每天重复做就很浪费精力。
-              所以我会把能规则化的流程尽量交给自动化，自己只处理真正需要判断的部分。
+              但每天重复做很浪费精力。
+              所以我会把能规则化的流程交给自动化，自己只处理真正需要判断的部分。
             </p>
-
             <div class="visual v2"></div>
           </article>
         </div>
       </div>
 
-      <div class="metrics">
-        <div class="metric">
-          <small>我做产品时先看什么</small>
-          <strong class="counter-pop">01</strong>
-          <span>先找最烦、最重复、最容易出错的那一步。</span>
-        </div>
-
-        <div class="metric">
-          <small>什么功能值得留下</small>
-          <strong class="counter-pop">02</strong>
-          <span>如果它不能让人少想一步、少点一下，就值得再问一次有没有必要。</span>
-        </div>
-
-        <div class="metric">
-          <small>我怎么看界面</small>
-          <strong class="counter-pop">03</strong>
-          <span>不是把东西摆好看，而是让重要信息自己跳出来。</span>
-        </div>
-
-        <div class="metric">
-          <small>为什么一直改</small>
-          <strong class="counter-pop">∞</strong>
-          <span>因为自己每天在用，很多问题只有真正用起来以后才看得到。</span>
-        </div>
+      <div class="stats">
+        <div class="stat"><small>先看什么</small><strong>01</strong><span>先找最烦、最重复、最容易出错的那一步。</span></div>
+        <div class="stat"><small>什么值得留</small><strong>02</strong><span>不能让人少想一步、少点一下的功能，就值得再问一次有没有必要。</span></div>
+        <div class="stat"><small>怎么看界面</small><strong>03</strong><span>不是摆得好看，而是让重要信息自己跳出来。</span></div>
+        <div class="stat"><small>为什么一直改</small><strong>∞</strong><span>很多问题只有真正每天使用以后才会暴露出来。</span></div>
       </div>
     </section>
 
     <section class="section reveal" id="about">
       <div class="section-head">
         <div class="section-id">02 / ABOUT · 关于我</div>
-
         <div class="section-copy">
           <h2>我不是科班做产品的，<br>但我每天都在解决产品问题。</h2>
           <p>
-            我的很多想法都来自实际工作。商品怎么展示更清楚、数据怎么看更快、
-            通知怎么少打扰、软件怎么别让人找半天按钮。
-            久而久之，我会自然地把运营、设计、自动化这些东西放到一起看。
+            商品怎么展示更清楚、数据怎么看更快、通知怎么少打扰、软件怎么别让人找半天按钮。
+            这些问题做久了以后，我会自然地把运营、设计和自动化放在一起看。
           </p>
         </div>
       </div>
 
       <div class="bento">
-        <article class="bento-card tall acid shimmer">
+        <article class="bento-card tall acid shine">
           <h4>我比较擅长的事</h4>
           <p>
-            把一个本来很散的问题整理成清楚的结构。
+            把一个原本很散的问题整理成清楚结构。
             我不一定从代码开始，也不一定从设计开始，
-            我通常先判断：到底哪里最影响结果。
+            我通常先判断到底哪里最影响结果。
           </p>
-
           <div class="pills">
             <span class="pill">电商运营</span>
             <span class="pill">AI 应用</span>
@@ -257,7 +201,6 @@
             <span class="pill">UI 梳理</span>
             <span class="pill">流程优化</span>
           </div>
-
           <div class="giant">01</div>
         </article>
 
@@ -273,18 +216,13 @@
 
         <article class="bento-card light">
           <h4>平时常用</h4>
-          <p>
-            ChatGPT、飞书多维表格、GitHub、Vercel、影刀 RPA，
-            以及各种能把重复工作自动掉的小工具。
-          </p>
+          <p>ChatGPT、飞书多维表格、GitHub、Vercel、影刀 RPA，以及各种能把重复工作自动掉的小工具。</p>
           <div class="giant">03</div>
         </article>
 
         <article class="bento-card">
           <h4>最近最感兴趣</h4>
-          <p>
-            AI 工作流、个人软件、数据看板、自动化系统，以及“一个人可以做到多大的产品闭环”。
-          </p>
+          <p>AI 工作流、个人软件、数据看板、自动化系统，以及“一个人到底能做到多大的产品闭环”。</p>
           <div class="giant">04</div>
         </article>
       </div>
@@ -293,50 +231,35 @@
     <section class="section reveal">
       <div class="section-head">
         <div class="section-id">03 / NOTES · 一些真实想法</div>
-
         <div class="section-copy">
-          <h2>我其实没有那么多大道理，<br>更多是做着做着想明白的。</h2>
-          <p>
-            这些不是“个人品牌金句”，就是我现在做项目时比较真实的判断。
-          </p>
+          <h2>没有那么多大道理，<br>更多是做着做着想明白的。</h2>
+          <p>这些不是“个人品牌金句”，就是我现在做项目时比较真实的判断。</p>
         </div>
       </div>
 
-      <div class="story">
-        <article class="story-card">
+      <div class="notes">
+        <article class="note">
           <h4>关于效率</h4>
-          <p>
-            我以前也会觉得“多做一点就好了”，后来慢慢发现，
-            很多低效不是人不努力，而是流程本身就不值得被重复执行。
-          </p>
-          <div class="quote">能自动的事情，就别靠记性；能少一步的流程，就别多点一次。</div>
+          <p>很多低效不是人不努力，而是流程本身就不值得被重复执行。</p>
+          <blockquote>能自动的事情，就别靠记性；能少一步的流程，就别多点一次。</blockquote>
         </article>
 
-        <article class="story-card">
+        <article class="note">
           <h4>关于设计</h4>
-          <p>
-            我不觉得高级感等于玻璃、渐变、阴影。
-            真正好看的界面，通常是信息关系很清楚，细节又没有敷衍。
-          </p>
-          <div class="quote">用户不应该因为设计“很酷”，反而不知道下一步该做什么。</div>
+          <p>我不觉得高级感等于玻璃、渐变、阴影。真正舒服的界面，通常是信息关系很清楚，细节又没有敷衍。</p>
+          <blockquote>用户不应该因为设计“很酷”，反而不知道下一步该做什么。</blockquote>
         </article>
 
-        <article class="story-card">
+        <article class="note">
           <h4>关于 AI</h4>
-          <p>
-            我对 AI 最大的兴趣，不是让它替我写一段话，
-            而是让它接进真正的工作里，跟数据、表格、RPA 和软件流程连起来。
-          </p>
-          <div class="quote">AI 真正有意思的地方，是它开始参与流程，而不只是参与聊天。</div>
+          <p>我对 AI 最大的兴趣，不是让它替我写一段话，而是让它接进真实工作流，跟数据、表格和自动化一起工作。</p>
+          <blockquote>AI 真正有意思的地方，是它开始参与流程，而不只是参与聊天。</blockquote>
         </article>
 
-        <article class="story-card">
+        <article class="note">
           <h4>关于做自己的东西</h4>
-          <p>
-            我很享受一个项目从“这里怎么这么难用”开始，
-            最后变成自己每天真的会打开的工具。
-          </p>
-          <div class="quote">做自己的产品，最难的不是开始，而是愿不愿意一直改。</div>
+          <p>我很享受一个项目从“这里怎么这么难用”开始，最后变成自己每天真的会打开的工具。</p>
+          <blockquote>做自己的产品，最难的不是开始，而是愿不愿意一直改。</blockquote>
         </article>
       </div>
     </section>
@@ -344,49 +267,37 @@
     <section class="section reveal" id="experience">
       <div class="section-head">
         <div class="section-id">04 / EXPERIENCE · 经历</div>
-
         <div class="section-copy">
           <h2>不是一条标准路线，<br>但每一步都能接起来。</h2>
           <p>
             先做业务，再碰自动化，再开始做自己的软件和网站。
-            看起来跨度很大，但对我来说，其实一直在解决同一种问题：
-            怎么把事情做得更顺、更快、更清楚。
+            看起来跨度很大，但其实一直在解决同一种问题：怎么把事情做得更顺、更快、更清楚。
           </p>
         </div>
       </div>
 
       <div class="timeline">
         <article class="time-card">
-          <div class="year">BUSINESS / 业务</div>
+          <small>BUSINESS / 业务</small>
           <h4>从电商开始理解“结果”</h4>
-          <p>
-            商品、视觉、流量、广告、成交，这些事情让我慢慢形成一个习惯：
-            再好看的方案，如果对真实结果没有帮助，就还不算做完。
-          </p>
+          <p>商品、视觉、流量、广告、成交，让我慢慢形成一个习惯：再好看的方案，如果对真实结果没有帮助，就还不算做完。</p>
         </article>
 
         <article class="time-card">
-          <div class="year">AUTOMATION / 自动化</div>
+          <small>AUTOMATION / 自动化</small>
           <h4>开始对重复操作越来越没耐心</h4>
-          <p>
-            当同一个动作一天做很多次以后，我会本能地想把它交给 RPA。
-            从改价、统计到日报，我做自动化的动力其实很朴素：不想把时间花在机械重复上。
-          </p>
+          <p>当同一个动作一天做很多次，我会本能地想把它交给 RPA。从改价、统计到日报，动力其实很朴素：不想把时间花在机械重复上。</p>
         </article>
 
         <article class="time-card">
-          <div class="year">PRODUCT / 产品</div>
+          <small>PRODUCT / 产品</small>
           <h4>开始真正做自己的东西</h4>
-          <p>
-            从界面草图、功能结构，到 GitHub、Vercel 和持续修改，
-            我开始体会一个项目从“想法”变成“能用”的过程。
-            这也是我现在最想继续做下去的方向。
-          </p>
+          <p>从界面草图、功能结构，到 GitHub、Vercel 和持续修改，我开始真正体会一个项目从“想法”变成“能用”的过程。</p>
         </article>
       </div>
     </section>
 
-    <section class="vision reveal shimmer" id="vision">
+    <section class="vision reveal shine" id="vision">
       <div class="vision-grid">
         <div>
           <div class="section-id" style="color:#60656e">05 / NEXT · 接下来</div>
@@ -397,7 +308,7 @@
           <p>
             现在每个项目还是分开的：超级打印是打印工具，融通金是行情系统，
             电商自动化处理店铺数据。
-            但我真正想做的是，让这些工具以后都可以互相认识、互相调用，
+            但我真正想做的是，让这些工具以后可以互相认识、互相调用，
             最后形成一套属于自己的个人数字工作台。
           </p>
 
@@ -412,171 +323,55 @@
       </div>
     </section>
 
-    <section class="contact reveal shimmer" id="contact">
+    <section class="contact reveal shine" id="contact">
       <div>
-        <div class="eyebrow">最后一页 · <strong>LET'S CONNECT</strong></div>
+        <div class="kicker">最后一页 · <strong>LET'S CONNECT</strong></div>
         <h2>想法可以很多，<br>但最后还是要做出来。</h2>
         <p>
-          这里以后会放我的真实项目、更新记录、联系方式和更多正在做的东西。
+          这里以后会继续放我的真实项目、更新记录、联系方式和更多正在做的东西。
           现在它还在变化，就像我手里的其他项目一样。
         </p>
       </div>
 
-      <div class="contact-actions">
+      <div class="actions">
         <a class="btn btn-acid" href="https://github.com/youzhi1701" target="_blank" rel="noreferrer">去 GitHub 看看 ↗</a>
         <a class="btn btn-dark" href="#top">回到顶部 ↑</a>
       </div>
     </section>
 
-    <div class="floating-dock">
-      <a href="#top">首</a>
-      <a href="#work">项</a>
-      <a href="#about">我</a>
-      <a href="#experience">历</a>
-      <a href="#contact">联</a>
-    </div>
-
     <footer>
       <span>© 2026 蔡宏亮 · CAI HONGLIANG</span>
-      <span>PERSONAL PORTFOLIO · MOBILE-FIRST V06</span>
+      <span>PERSONAL PORTFOLIO · V07</span>
     </footer>
   </main>
 
   <script>
-    const canvas = document.getElementById('fx');
-    const ctx = canvas.getContext('2d');
-    let dots = [];
-
-    function resizeCanvas(){
-      const dpr = Math.min(devicePixelRatio || 1, 2);
-      canvas.width = innerWidth * dpr;
-      canvas.height = innerHeight * dpr;
-      canvas.style.width = innerWidth + 'px';
-      canvas.style.height = innerHeight + 'px';
-      ctx.setTransform(dpr,0,0,dpr,0,0);
-    }
-
-    function createDots(){
-      const count = innerWidth < 760 ? 22 : 48;
-      dots = Array.from({length:count},()=>({
-        x:Math.random()*innerWidth,
-        y:Math.random()*innerHeight,
-        r:Math.random()*1.4+.3,
-        vx:(Math.random()-.5)*.18,
-        vy:(Math.random()-.5)*.16,
-        a:Math.random()*.24+.06
-      }));
-    }
-
-    function animateDots(){
-      ctx.clearRect(0,0,innerWidth,innerHeight);
-
-      dots.forEach(p=>{
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if(p.x < 0) p.x = innerWidth;
-        if(p.x > innerWidth) p.x = 0;
-        if(p.y < 0) p.y = innerHeight;
-        if(p.y > innerHeight) p.y = 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle = 'rgba(255,255,255,' + p.a + ')';
-        ctx.fill();
-      });
-
-      requestAnimationFrame(animateDots);
-    }
-
-    resizeCanvas();
-    createDots();
-    animateDots();
-
-    addEventListener('resize',()=>{
-      resizeCanvas();
-      createDots();
-    });
-
-    const progress = document.getElementById('progress');
-    const spotlight = document.getElementById('spotlight');
-    const dockLinks = document.querySelectorAll('.floating-dock a');
-    const navLinks = document.querySelectorAll('.navlinks a');
-    const parallax = document.querySelectorAll('[data-parallax]');
-
-    addEventListener('pointermove',e=>{
-      if(spotlight){
-        spotlight.style.left = e.clientX + 'px';
-        spotlight.style.top = e.clientY + 'px';
-      }
-    });
+    const progress=document.getElementById('progress');
+    const links=[...document.querySelectorAll('.navlinks a')];
+    const sections=[...document.querySelectorAll('section[id]')];
 
     addEventListener('scroll',()=>{
-      const max = document.documentElement.scrollHeight - innerHeight;
-      progress.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%';
+      const max=document.documentElement.scrollHeight-innerHeight;
+      progress.style.width=(max?scrollY/max*100:0)+'%';
+      let current='';
+      sections.forEach(s=>{if(scrollY>=s.offsetTop-180)current=s.id});
+      links.forEach(a=>a.classList.toggle('active',a.hash==='#'+current));
+    },{passive:true});
 
-      parallax.forEach(el=>{
-        el.style.translate = '0 ' + (scrollY * .035) + 'px';
-      });
-
-      let current = '';
-      document.querySelectorAll('section[id]').forEach(sec=>{
-        if(scrollY >= sec.offsetTop - 180) current = sec.id;
-      });
-
-      navLinks.forEach(link=>{
-        link.classList.toggle('active',link.getAttribute('href') === '#' + current);
-      });
-      dockLinks.forEach(link=>{
-        link.classList.toggle('active',link.getAttribute('href') === '#' + current);
-      });
-    });
-
-    let drift = 0;
-    function ambientMotion(){
-      drift += 0.0025;
-      document.querySelectorAll('.visual').forEach((el,i)=>{
-        el.style.translate = '0 ' + (Math.sin(drift*2 + i)*6) + 'px';
-      });
-      document.querySelectorAll('.giant').forEach((el,i)=>{
-        el.style.translate = (Math.sin(drift + i)*4) + 'px ' + (Math.cos(drift*1.2 + i)*3) + 'px';
-      });
-      requestAnimationFrame(ambientMotion);
-    }
-    ambientMotion();
-
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting) entry.target.classList.add('show');
-      });
-    },{threshold:.10});
-
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-    const title = document.querySelector('.split-title');
-    const firstText = title.childNodes[0].textContent;
-    title.childNodes[0].textContent = '';
-
-    [...firstText].forEach((ch,i)=>{
-      const span = document.createElement('span');
-      span.className = 'char';
-      span.textContent = ch;
-      span.style.animationDelay = (i*.08+.18)+'s';
-      title.insertBefore(span,title.firstElementChild);
-    });
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+    },{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
     if(matchMedia('(pointer:fine)').matches){
-      document.querySelectorAll('.work-main,.work-card,.bento-card,.time-card,.story-card').forEach(card=>{
+      document.querySelectorAll('.project-main,.project-card,.bento-card,.note,.time-card').forEach(card=>{
         card.addEventListener('pointermove',e=>{
-          const r = card.getBoundingClientRect();
-          const rx = ((e.clientY-r.top)/r.height-.5)*-3.2;
-          const ry = ((e.clientX-r.left)/r.width-.5)*4;
-          card.style.transform = 'perspective(1000px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-3px)';
+          const r=card.getBoundingClientRect();
+          const x=(e.clientX-r.left)/r.width-.5;
+          const y=(e.clientY-r.top)/r.height-.5;
+          card.style.transform=`perspective(900px) rotateX(${-y*3}deg) rotateY(${x*4}deg) translateY(-3px)`;
         });
-
-        card.addEventListener('pointerleave',()=>{
-          card.style.transform = '';
-        });
+        card.addEventListener('pointerleave',()=>card.style.transform='');
       });
     }
   </script>
