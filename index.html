@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="motion-grid"></div>
+  <div class="ambient-blob blob-a"></div>
+  <div class="ambient-blob blob-b"></div>
+  <div class="ambient-blob blob-c"></div>
+  <div class="scanlines"></div>
+  <div class="spotlight" id="spotlight"></div>
   <canvas id="fx"></canvas>
   <div id="progress"></div>
 
@@ -30,6 +36,10 @@
     <section class="hero" id="top">
       <div class="hero-main reveal shimmer">
         <div class="orbit" data-parallax><span></span></div>
+        <div class="hero-pulse hp1"></div>
+        <div class="hero-pulse hp2"></div>
+        <div class="hero-pulse hp3"></div>
+        <div class="mobile-orbit"></div>
         <div class="float-chip fc1">AI WORKFLOW</div>
         <div class="float-chip fc2">E-COMMERCE</div>
         <div class="float-chip fc3">AUTOMATION</div>
@@ -98,6 +108,13 @@
       <div class="marquee-track">
         <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span><span>独立构建 INDIE BUILDING</span>
         <span>产品 PRODUCT</span><span>自动化 AUTOMATION</span><span>电商 E-COMMERCE</span><span>AI 工作流 AI WORKFLOW</span><span>视觉 VISUAL</span><span>效率 EFFICIENCY</span><span>独立构建 INDIE BUILDING</span>
+      </div>
+    </div>
+
+    <div class="marquee reverse" aria-hidden="true">
+      <div class="marquee-track">
+        <span>BUILD SMALL</span><span>ITERATE FAST</span><span>KEEP IT USEFUL</span><span>LESS FRICTION</span><span>MORE CLARITY</span><span>MAKE IT REAL</span>
+        <span>BUILD SMALL</span><span>ITERATE FAST</span><span>KEEP IT USEFUL</span><span>LESS FRICTION</span><span>MORE CLARITY</span><span>MAKE IT REAL</span>
       </div>
     </div>
 
@@ -185,25 +202,25 @@
       <div class="metrics">
         <div class="metric">
           <small>我做产品时先看什么</small>
-          <strong>01</strong>
+          <strong class="counter-pop">01</strong>
           <span>先找最烦、最重复、最容易出错的那一步。</span>
         </div>
 
         <div class="metric">
           <small>什么功能值得留下</small>
-          <strong>02</strong>
+          <strong class="counter-pop">02</strong>
           <span>如果它不能让人少想一步、少点一下，就值得再问一次有没有必要。</span>
         </div>
 
         <div class="metric">
           <small>我怎么看界面</small>
-          <strong>03</strong>
+          <strong class="counter-pop">03</strong>
           <span>不是把东西摆好看，而是让重要信息自己跳出来。</span>
         </div>
 
         <div class="metric">
           <small>为什么一直改</small>
-          <strong>∞</strong>
+          <strong class="counter-pop">∞</strong>
           <span>因为自己每天在用，很多问题只有真正用起来以后才看得到。</span>
         </div>
       </div>
@@ -411,6 +428,14 @@
       </div>
     </section>
 
+    <div class="floating-dock">
+      <a href="#top">首</a>
+      <a href="#work">项</a>
+      <a href="#about">我</a>
+      <a href="#experience">历</a>
+      <a href="#contact">联</a>
+    </div>
+
     <footer>
       <span>© 2026 蔡宏亮 · CAI HONGLIANG</span>
       <span>PERSONAL PORTFOLIO · MOBILE-FIRST V06</span>
@@ -474,8 +499,17 @@
     });
 
     const progress = document.getElementById('progress');
+    const spotlight = document.getElementById('spotlight');
+    const dockLinks = document.querySelectorAll('.floating-dock a');
     const navLinks = document.querySelectorAll('.navlinks a');
     const parallax = document.querySelectorAll('[data-parallax]');
+
+    addEventListener('pointermove',e=>{
+      if(spotlight){
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+      }
+    });
 
     addEventListener('scroll',()=>{
       const max = document.documentElement.scrollHeight - innerHeight;
@@ -493,7 +527,23 @@
       navLinks.forEach(link=>{
         link.classList.toggle('active',link.getAttribute('href') === '#' + current);
       });
+      dockLinks.forEach(link=>{
+        link.classList.toggle('active',link.getAttribute('href') === '#' + current);
+      });
     });
+
+    let drift = 0;
+    function ambientMotion(){
+      drift += 0.0025;
+      document.querySelectorAll('.visual').forEach((el,i)=>{
+        el.style.translate = '0 ' + (Math.sin(drift*2 + i)*6) + 'px';
+      });
+      document.querySelectorAll('.giant').forEach((el,i)=>{
+        el.style.translate = (Math.sin(drift + i)*4) + 'px ' + (Math.cos(drift*1.2 + i)*3) + 'px';
+      });
+      requestAnimationFrame(ambientMotion);
+    }
+    ambientMotion();
 
     const observer = new IntersectionObserver(entries=>{
       entries.forEach(entry=>{
