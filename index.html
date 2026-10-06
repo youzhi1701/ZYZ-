@@ -15,7 +15,10 @@
     <header class="nav">
       <a class="brand" href="#top">
         <span class="brand-mark">蔡</span>
-        <span class="brand-copy"><strong>蔡宏亮</strong><span>CAI HONGLIANG · PERSONAL SYSTEM</span></span>
+        <span class="brand-copy">
+          <strong>蔡宏亮</strong>
+          <span>CAI HONGLIANG · PERSONAL SYSTEM</span>
+        </span>
       </a>
 
       <nav class="navlinks">
@@ -34,7 +37,10 @@
     <section class="hero" id="top">
       <div class="hero-main reveal">
         <div>
-          <div class="eyebrow">E-COMMERCE · AI · AUTOMATION · BUILDER</div>
+          <div class="hero-topline">
+            <div class="eyebrow">E-COMMERCE · AI · AUTOMATION · BUILDER</div>
+            <div class="hero-index">PERSONAL SYSTEM / 01</div>
+          </div>
 
           <div class="hero-title">
             <div class="name-en">CAI HONGLIANG</div>
@@ -180,7 +186,12 @@
         </div>
 
         <div class="system-flow">
-          <span>发现问题</span><span>拆解问题</span><span>找工具</span><span>快速验证</span><span>实际使用</span><span>继续修改</span>
+          <span>发现问题</span>
+          <span>拆解问题</span>
+          <span>找工具</span>
+          <span>快速验证</span>
+          <span>实际使用</span>
+          <span>继续修改</span>
         </div>
       </div>
     </section>
@@ -197,16 +208,16 @@
 
       <div class="projects">
         <article class="featured">
-          <div class="project-visual">
-            <div class="visual-ui">
-              <div class="visual-grid"><div></div><div></div></div>
+          <div class="project-visual blue">
+            <div class="silver-stack">
+              <div class="silver-bar"></div>
             </div>
           </div>
 
           <div class="project-content">
             <div class="project-kicker">FEATURED 01 / E-COMMERCE</div>
             <h3>贵金属电商经营</h3>
-            <h4>从商品本身，一直做到消费者真正看到它。</h4>
+            <h4>从产品本身，一直做到消费者真正看到它。</h4>
             <p>
               围绕实物白银做产品规划、不同克重组合、京东与淘宝视觉、商品标题、价格体系、
               广告投放、消费者反馈、包装、售后规则和供应链沟通。
@@ -221,7 +232,15 @@
         <article class="featured reverse">
           <div class="project-visual purple">
             <div class="visual-ui">
-              <div class="visual-grid"><div></div><div></div></div>
+              <div class="visual-top"></div>
+              <div class="market-chart">
+                <svg viewBox="0 0 600 220" aria-hidden="true">
+                  <path d="M0 160 C40 150 68 170 104 138 S165 122 205 134 S270 88 318 98 S380 58 432 74 S510 44 600 30"
+                    fill="none" stroke="#7f91e6" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M0 176 C56 182 82 154 125 166 S195 150 248 154 S324 126 382 134 S464 108 600 112"
+                    fill="none" stroke="#b39bec" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+                </svg>
+              </div>
             </div>
           </div>
 
@@ -242,8 +261,16 @@
 
         <article class="featured">
           <div class="project-visual gold">
-            <div class="visual-ui">
-              <div class="visual-grid"><div></div><div></div></div>
+            <div class="flow-map">
+              <div class="flow-line l1"></div>
+              <div class="flow-line l2"></div>
+              <div class="flow-line l3"></div>
+              <div class="flow-line l4"></div>
+              <div class="flow-node">白银行情</div>
+              <div class="flow-node">店铺策略</div>
+              <div class="flow-node">自动计算</div>
+              <div class="flow-node">成交汇总</div>
+              <div class="flow-node">日报通知</div>
             </div>
           </div>
 
@@ -379,7 +406,7 @@
 
     <footer>
       <span>© 2026 蔡宏亮 · CAI HONGLIANG</span>
-      <span>LAST UPDATED · 2026.10.04 · FINAL V13</span>
+      <span>LAST UPDATED · 2026.10.06 · FINAL V14</span>
     </footer>
   </main>
 
@@ -396,12 +423,18 @@
       sections.forEach(section=>{
         if(scrollY>=section.offsetTop-180)current=section.id;
       });
-      links.forEach(link=>link.classList.toggle('active',link.hash==='#'+current));
+
+      links.forEach(link=>{
+        link.classList.toggle('active',link.hash==='#'+current);
+      });
     },{passive:true});
 
     const observer=new IntersectionObserver(entries=>{
       entries.forEach(entry=>{
-        if(entry.isIntersecting)entry.target.classList.add('show');
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
       });
     },{threshold:.10});
 
